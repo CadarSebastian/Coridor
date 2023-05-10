@@ -1,13 +1,15 @@
 function setup(){
-    createCanvas(800,800)
+    createCanvas(720,700);
+    
 }
 function draw(){
 
     background("#00F6F0")
     
     c();
-
+    showPion1();
     createMatrice();
+    
     
 }
 let x=30;
@@ -21,9 +23,6 @@ function createMatrice(){
             mat[i].push({
                 value:square(x,y,55,10),
                 color:("#FDC372")
-
-
-
             })
         }
     }
