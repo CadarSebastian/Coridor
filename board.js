@@ -7,6 +7,7 @@ function draw() {
     background("#00F6F0");
     showBricks();
     showPion1();
+   
 
 
 
@@ -61,6 +62,6 @@ function showBricks() {
 
 
 function getBrickX(){
-    
+
 
 }
