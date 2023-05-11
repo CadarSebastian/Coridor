@@ -24,26 +24,59 @@ function showPion2(){
     circle(circleObj.x,circleObj.y,circleObj.size);
 }
 
+
 function keyPressed(){
     if(turn== true){
         if (keyCode === LEFT_ARROW && currentC1J>0) {
-          currentC1J=currentC1J-1;turn=false;
+            if(!(currentC1J-1==currentC2J &&currentC1I==currentC2I)){
+                currentC1J=currentC1J-1;
+                turn=false;
+            }
+          
         } else if (keyCode === RIGHT_ARROW && currentC1J<8) {
-            currentC1J=currentC1J+1;turn=false;
+            if(!(currentC1J+1==currentC2J && currentC1I==currentC2I)){
+                currentC1J=currentC1J+1;
+                turn=false;
+            }
+           
         }else if (keyCode === DOWN_ARROW && currentC1I<8) {
-            currentC1I=currentC1I+1;turn=false;
+            if(!(currentC1I+1==currentC2I && currentC1J==currentC2J)){
+                currentC1I=currentC1I+1;
+                turn=false;
+            }
+            
         }else if (keyCode === UP_ARROW && currentC1I>0) {
-            currentC1I=currentC1I-1;turn=false;
+            if(!(currentC1I-1==currentC2I && currentC1J==currentC2J)){
+                currentC1I=currentC1I-1;
+                turn=false;
+            }
+            
         }
     }else{
         if (keyCode === LEFT_ARROW && currentC2J>0) {
-            currentC2J=currentC2J-1;turn= true
+            if(!(currentC2J-1==currentC1J && currentC2I==currentC1I)){
+                currentC2J=currentC2J-1;
+                turn=true;
+            }
+            
           } else if (keyCode === RIGHT_ARROW && currentC2J<8) {
-              currentC2J=currentC2J+1;turn= true
+            if(!(currentC2J+1==currentC1J && currentC2I==currentC1I)){
+                currentC2J=currentC2J+1;
+                turn=true;
+            }
+              
           }else if (keyCode === DOWN_ARROW && currentC2I<8) {
-              currentC2I=currentC2I+1;turn= true
+            if(!(currentC2I+1==currentC1I && currentC2J==currentC1J)){
+                currentC2I=currentC2I+1;
+                turn=true;
+            }
+              
           }else if (keyCode === UP_ARROW && currentC2I>0) {
-              currentC2I=currentC2I-1;turn= true
+            if(!(currentC2I-1==currentC1I && currentC2J==currentC1J)){
+                currentC2I=currentC2I-1;
+                turn=true;
+            }
+              
           }
     }
 
