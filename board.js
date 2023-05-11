@@ -7,14 +7,24 @@ function draw() {
     background("#00F6F0");
     showBricks();
     showPion1();
-   
+    showPion2();
+    turnSqr();
 
 
 
 
 }
 
-
+function turnSqr(){
+    if(turn==true){
+         fill("Blue");
+    }else{
+       fill("red");
+    }
+    rect(600,40,50,50);
+    
+    
+}
 
 let table = [];
 
