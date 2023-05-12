@@ -1,6 +1,6 @@
 function setup() {
     createCanvas(720, 700);
-    initBricks();
+    initTable();
 
 }
 function draw() {
@@ -9,10 +9,6 @@ function draw() {
     showPion1();
     showPion2();
     turnSqr();
-
-
-
-
 }
 
 function turnSqr(){
@@ -22,24 +18,16 @@ function turnSqr(){
        fill("red");
     }
     rect(600,40,50,50);
-    
-    
 }
 
 let table = [];
-
-
-
-function initBricks() {
-    const bricksNumber = 5;
+function initTable() {
+    
     const marginLeft = 20;
     const marginRigth = 20;
-
     const bricksDistance = 10;
-
     const brickWidth = 50;
-
-
+    
     for (let i = 0; i < 9; i++) {
         let brick = [];
         for (let j = 0; j < 9; j++) {
@@ -65,13 +53,5 @@ function showBricks() {
             fill(bricks[i][j].color);
             rect(bricks[i][j].x, bricks[i][j].y, bricks[i][j].width, bricks[i][j].heigth);
         }
-
-
     }
-}
-
-
-function getBrickX(){
-
-
 }
