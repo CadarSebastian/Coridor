@@ -21,3 +21,8 @@ let IWidth=10;
 let IHeight=110;
 
 let newWall=false;
+
+let curX;
+let curY;
+
+let c=0;
