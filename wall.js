@@ -14,7 +14,8 @@ if(newWall==true){
     rect(mouseX,mouseY,BWidth,BHeight)
 }
 if(c==1){
-    
+     curX=mouseX;
+     curY=mouseY;
     rect(curX,curY,BWidth,BHeight)
 }
 
@@ -28,8 +29,7 @@ function mouseClicked() {
       console.log(1)
       
     }else if(newWall==true){
-        const curX=mouseX;
-    const curY=mouseY;
+       
         console.log(2)
         newWall=false;
         c=1;
