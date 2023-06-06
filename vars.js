@@ -13,3 +13,11 @@ let currentC1J=4;
 
 let currentC2I=8;
 let currentC2J=4;
+
+let BWidth=10;
+let BHeight=110;
+
+let IWidth=10;
+let IHeight=110;
+
+let newWall=false;

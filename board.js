@@ -1,5 +1,5 @@
 function setup() {
-    createCanvas(720, 700);
+    createCanvas(720, 600);
     initTable();
 
 }
@@ -9,6 +9,7 @@ function draw() {
     showPion1();
     showPion2();
     turnSqr();
+    walls();
 }
 
 function turnSqr(){
