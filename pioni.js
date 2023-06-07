@@ -80,7 +80,7 @@ function keyPressed(){
           }
     }
 
-    if(newWall==true){
+    if(newWall==true ){
         if(keyCode === 82){
             aux = BWidth;
 		BWidth = BHeight;

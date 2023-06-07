@@ -10,6 +10,7 @@ function draw() {
     showPion2();
     turnSqr();
     walls();
+    saveWalls();
 }
 
 function turnSqr(){
@@ -42,10 +43,10 @@ function initTable() {
             });
         }
         bricky = bricky + 60;
-        console.log(bricky);
+        
         bricks.push(brick);
     }
-    console.log(bricks);
+    
 }
 
 function showBricks() {
