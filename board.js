@@ -1,7 +1,16 @@
 function setup() {
-    createCanvas(720, 600);
+    createCanvas(800, 600);
     initTable();
-
+    input = createInput();
+    name1=input.value();
+    
+    input.position(570, 110);
+    input2 = createInput();
+    input2.position(570, 130);
+    button = createButton('submit');
+  button.position(input.x + input.width,input.y);
+  button.mousePressed(names);
+   
 }
 function draw() {
     background("#00F6F0");
@@ -11,8 +20,21 @@ function draw() {
     turnSqr();
     walls();
     saveWalls();
+     buttonReset();
 }
-
+function names(){
+    text(name1,100,100);
+}
+function buttonReset(){
+    buttonR = createButton('Reset');
+    buttonR.position(30,20)
+    buttonR.mousePressed(reset);
+   
+}
+function reset(){
+    wallArry=0;
+     console.log("bob");
+}
 function turnSqr(){
     if(turn==true){
          fill("Blue");

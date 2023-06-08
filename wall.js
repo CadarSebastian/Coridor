@@ -49,7 +49,7 @@ function saveWalls() {
         for (let i = 0; i < wallArry.length; i++) {
 
             rect(wallArry[i].curX,wallArry[i].curY,wallArry[i].width,wallArry[i].height)
-            console.log(i, wallArry[i])
+            
 
         }
 
