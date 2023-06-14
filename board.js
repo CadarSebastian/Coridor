@@ -20,7 +20,7 @@ function draw() {
     turnSqr();
     walls();
     saveWalls();
-     buttonReset();
+    buttonReset();
 }
 function names(){
     text(name1,100,100);
@@ -32,7 +32,7 @@ function buttonReset(){
    
 }
 function reset(){
-    wallArry=0;
+    wallArry.length=0;
      console.log("bob");
 }
 function turnSqr(){
