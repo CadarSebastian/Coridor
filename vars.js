@@ -22,7 +22,19 @@ let IHeight = 110;
 
 let newWall = false;
 
-let curX;
-let curY;
+let currX;
+let currY;
+let curX=currX;
+let curY=currY;
 
 let c = 0;
+block1up=0;
+block2up=0;
+
+block2dr=0;
+block1Dr=0;
+
+block2down=0;
+block1down=0;
+
+let game =true;

@@ -25,7 +25,7 @@ function mouseClicked() {
     if (mouseX > 600 && mouseX < 610 && mouseY > 400 && mouseY < 500) {
         newWall = true;
 
-        console.log(1)
+        
 
     } else if (newWall == true) {
         if(turn==true)
@@ -33,7 +33,7 @@ function mouseClicked() {
         else{turn=true}
         
         
-        console.log(2)
+       
         newWall = false;
 
 
