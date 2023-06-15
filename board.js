@@ -77,6 +77,8 @@ function reset() {
   currentC2J = 4;
   buttonR.position(30, 20);
   buttonR.size(80,20);
+  name1="Player1";
+  name2="Player2";
 }
 function turnSqr() {
     if (turn == true) {
