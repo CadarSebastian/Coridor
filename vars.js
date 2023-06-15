@@ -28,13 +28,17 @@ let curX=currX;
 let curY=currY;
 
 let c = 0;
-block1up=0;
-block2up=0;
+let block1up=0;
+let block2up=0;
 
-block2dr=0;
-block1Dr=0;
+let block2dr=0;
+let block1dr=0;
 
-block2down=0;
-block1down=0;
+let block2down=0;
+let block1down=0;
+
+let block2st=0;
+let block1st=0;
+
 
 let game =true;
