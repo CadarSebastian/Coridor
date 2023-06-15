@@ -2,15 +2,15 @@ function setup() {
     createCanvas(800, 600);
     initTable();
     input = createInput();
-    name1=input.value();
-    
+    name1 = input.value();
+
     input.position(570, 110);
     input2 = createInput();
     input2.position(570, 130);
     button = createButton('submit');
-  button.position(input.x + input.width,input.y);
-  button.mousePressed(names);
-   
+    button.position(input.x + input.width, input.y);
+    button.mousePressed(names);
+
 }
 function draw() {
     background("#00F6F0");
@@ -18,40 +18,41 @@ function draw() {
     showPion1();
     showPion2();
     turnSqr();
-    walls();
-    saveWalls();
     buttonReset();
+    fill("brown");
+    saveWalls();
+    walls();
 }
-function names(){
-    text(name1,100,100);
+function names() {
+    text(name1, 100, 100);
 }
-function buttonReset(){
+function buttonReset() {
     buttonR = createButton('Reset');
-    buttonR.position(30,20)
+    buttonR.position(30, 20)
     buttonR.mousePressed(reset);
-   
+
 }
-function reset(){
-    wallArry.length=0;
-     console.log("bob");
+function reset() {
+    wallArry.length = 0;
+    console.log("bob");
 }
-function turnSqr(){
-    if(turn==true){
-         fill("Blue");
-    }else{
-       fill("red");
+function turnSqr() {
+    if (turn == true) {
+        fill("Blue");
+    } else {
+        fill("red");
     }
-    rect(600,40,50,50);
+    rect(600, 40, 50, 50);
 }
 
 let table = [];
 function initTable() {
-    
+
     const marginLeft = 20;
     const marginRigth = 20;
     const bricksDistance = 10;
     const brickWidth = 50;
-    
+
     for (let i = 0; i < 9; i++) {
         let brick = [];
         for (let j = 0; j < 9; j++) {
@@ -61,14 +62,16 @@ function initTable() {
                 y: bricky,
                 width: brickWidth,
                 heigth: 50,
-                margin: 10
+                margin: 10,
+                blocked: 0
             });
         }
         bricky = bricky + 60;
-        
+
         bricks.push(brick);
+
     }
-    
+
 }
 
 function showBricks() {
