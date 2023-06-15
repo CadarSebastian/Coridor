@@ -2,7 +2,7 @@ function setup() {
     createCanvas(800, 600);
     initTable();
     input = createInput();
-    name1 = input.value();
+    
 
     input.position(570, 110);
     input2 = createInput();
@@ -24,7 +24,16 @@ function draw() {
     walls();
 }
 function names() {
-    text(name1, 100, 100);
+    
+    if(input.value() != ""){
+        name1 = input.value();
+    }
+    if(input2.value() != ""){
+        name2 = input2.value();
+    }
+}
+function win(){
+    
 }
 function buttonReset() {
     buttonR = createButton('Reset');
@@ -35,6 +44,10 @@ function buttonReset() {
 function reset() {
     wallArry.length = 0;
     console.log("bob");
+    currentC1I = 0;
+  currentC1J = 4;
+  currentC2I = 8;
+  currentC2J = 4;
 }
 function turnSqr() {
     if (turn == true) {

@@ -39,6 +39,7 @@ let block1down=0;
 
 let block2st=0;
 let block1st=0;
-
+let name1="player1";
+let name2="player2";
 
 let game =true;
