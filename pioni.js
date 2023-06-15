@@ -10,8 +10,11 @@ function showPion1() {
     }
     fill(circleObj.color);
     circle(circleObj.x, circleObj.y, circleObj.size);
-    fill("black");
-    text(name1, circleObj.x - 17, circleObj.y + 5);
+    if (currentC1I != 8 && currentC2I != 0) {
+        fill("black");
+        textSize(10);
+        text(name1, circleObj.x - 10, circleObj.y + 5);
+      }
 
 
     for(i=0;i<wallArry.length;i++){
@@ -64,8 +67,12 @@ function showPion2() {
     }
     fill(circleObj.color);
     circle(circleObj.x, circleObj.y, circleObj.size);
-    fill("black");
-    text(name2, circleObj.x - 17, circleObj.y + 5);
+    if (currentC1I != 8 && currentC2I != 0) {
+        fill("black");
+        textSize(10);
+        text(name2, circleObj.x - 10, circleObj.y + 5);
+      }
+    
 
     
     for(i=0;i<wallArry.length;i++){

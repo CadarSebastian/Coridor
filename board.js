@@ -10,6 +10,10 @@ function setup() {
     button = createButton('submit');
     button.position(input.x + input.width, input.y);
     button.mousePressed(names);
+    buttonR = createButton('Play again');
+    buttonR.size(80,20);
+    buttonR.position(30, 20)
+    buttonR.mousePressed(reset);
 
 }
 function draw() {
@@ -18,29 +22,52 @@ function draw() {
     showPion1();
     showPion2();
     turnSqr();
-    buttonReset();
+    
     fill("brown");
     saveWalls();
     walls();
+    win();
+    
 }
 function names() {
     
     if(input.value() != ""){
+        textSize(12);
         name1 = input.value();
     }
     if(input2.value() != ""){
+        textSize(12);
         name2 = input2.value();
     }
 }
-function win(){
-    
-}
-function buttonReset() {
-    buttonR = createButton('Reset');
-    buttonR.position(30, 20)
-    buttonR.mousePressed(reset);
+function win() {
+    if (currentC1I == 8) {
+      playerWin(name1);
+    }
+    if (currentC2I < 1) {
+      playerWin(name2);
+    }
+  }
+  
+  function playerWin(player) {
+    if (player == name1) {
+      fill("blue");
+    } else {
+      fill("red");
+    }
+    rect(80, 100, 410, 400);
+    fill("black");
+  
+    textSize(50);
+    text(player + " wins!!", 150, 200);
+    buttonR.size(100,100);
+    buttonR.position(300, 300);
+  }
 
-}
+
+
+
+
 function reset() {
     wallArry.length = 0;
     console.log("bob");
@@ -48,6 +75,8 @@ function reset() {
   currentC1J = 4;
   currentC2I = 8;
   currentC2J = 4;
+  buttonR.position(30, 20);
+  buttonR.size(80,20);
 }
 function turnSqr() {
     if (turn == true) {

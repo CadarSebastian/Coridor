@@ -43,3 +43,4 @@ let name1="player1";
 let name2="player2";
 
 let game =true;
+
