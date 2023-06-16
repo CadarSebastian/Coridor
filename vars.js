@@ -24,23 +24,23 @@ let newWall = false;
 
 let currX;
 let currY;
-let curX=currX;
-let curY=currY;
+let curX = currX;
+let curY = currY;
 
 let c = 0;
-let block1up=0;
-let block2up=0;
+let block1up = 0;
+let block2up = 0;
 
-let block2dr=0;
-let block1dr=0;
+let block2dr = 0;
+let block1dr = 0;
 
-let block2down=0;
-let block1down=0;
+let block2down = 0;
+let block1down = 0;
 
-let block2st=0;
-let block1st=0;
-let name1="Player1";
-let name2="Player2";
+let block2st = 0;
+let block1st = 0;
+let name1 = "Player1";
+let name2 = "Player2";
 
-let game =true;
+let game = true;
 

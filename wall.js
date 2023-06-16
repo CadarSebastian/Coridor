@@ -21,19 +21,18 @@ function walls() {
 
 }
 function mouseClicked() {
-    // Check if the mouse click is within the specific area
+
     if (mouseX > 600 && mouseX < 610 && mouseY > 400 && mouseY < 500) {
         newWall = true;
 
-        
+
 
     } else if (newWall == true) {
-        if(turn==true)
-        {turn=false;}
-        else{turn=true}
-        
-        
-       
+        if (turn == true) { turn = false; }
+        else { turn = true }
+
+
+
         newWall = false;
 
 
@@ -47,11 +46,11 @@ function mouseClicked() {
 
     }
 
-    
+
 
 
 }
-var q = 0;
+
 
 function saveWalls() {
     if (wallArry.length > 0) {
