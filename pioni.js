@@ -16,11 +16,11 @@ function showPion1() {
         text(name1, circleObj.x - 10, circleObj.y + 5);
     }
 
-
+    if(turn==true){
     for (i = 0; i < wallArry.length; i++) {
         for (yplus = 0; yplus < 50; yplus++) {
             block1up = 0;
-            if (circleObj.y - yplus == wallArry[i].curY && (wallArry[i].curX + 10 < circleObj.x && circleObj.x < wallArry[i].curX + 100)) {
+            if (circleObj.y - yplus == wallArry[i].curY && (wallArry[i].curX + 10 < circleObj.x && circleObj.x < wallArry[i].curX + 100) && wallArry[i].width == 110) {
                 block1up = 1;
                 //console.log( block1up=1);
                 break;
@@ -42,7 +42,7 @@ function showPion1() {
     for (i = 0; i < wallArry.length; i++) {
         for (xplus = 0; xplus < 50; xplus++) {
             block1dr = 0;
-            if (circleObj.x + xplus == wallArry[i].curX && (wallArry[i].curY < circleObj.y && circleObj.y < wallArry[i].curY + 100)) {
+            if (circleObj.x + xplus == wallArry[i].curX && (wallArry[i].curY < circleObj.y && circleObj.y < wallArry[i].curY + 100)&&wallArry[i].height == 110) {
                 block1dr = 1;
                 console.log(block2up);
                 break;
@@ -52,13 +52,14 @@ function showPion1() {
     for (i = 0; i < wallArry.length; i++) {
         for (xplus = 0; xplus < 50; xplus++) {
             block1st = 0;
-            if (circleObj.x - xplus == wallArry[i].curX && (wallArry[i].curY < circleObj.y && circleObj.y < wallArry[i].curY + 100)) {
+            if (circleObj.x - xplus == wallArry[i].curX && (wallArry[i].curY < circleObj.y && circleObj.y < wallArry[i].curY + 100)&&wallArry[i].height == 110) {
                 block1st = 1;
                 console.log(block2up);
                 break;
             }
         }
     }
+}
 }
 
 function showPion2() {
@@ -78,7 +79,7 @@ function showPion2() {
     }
 
 
-
+    if(turn==false){
     for (i = 0; i < wallArry.length; i++) {
         for (yplus = 0; yplus < 50; yplus++) {
             block2up = 0;
@@ -93,7 +94,7 @@ function showPion2() {
     for (i = 0; i < wallArry.length; i++) {
         for (yplus = 0; yplus < 50; yplus++) {
             block2down = 0;
-            if (circleObj.y + yplus == wallArry[i].curY && (wallArry[i].curX < circleObj.x && circleObj.x < wallArry[i].curX + 100)) {
+            if (circleObj.y + yplus == wallArry[i].curY && (wallArry[i].curX < circleObj.x && circleObj.x < wallArry[i].curX + 100) && wallArry[i].width == 110) {
                 block2down = 1;
                 console.log(block2up);
                 break;
@@ -103,7 +104,7 @@ function showPion2() {
     for (i = 0; i < wallArry.length; i++) {
         for (xplus = 0; xplus < 50; xplus++) {
             block2dr = 0;
-            if (circleObj.x + xplus == wallArry[i].curX && (wallArry[i].curY < circleObj.y && circleObj.y < wallArry[i].curY + 100)) {
+            if (circleObj.x + xplus == wallArry[i].curX && (wallArry[i].curY < circleObj.y && circleObj.y < wallArry[i].curY + 100)&&wallArry[i].height == 110) {
                 block2dr = 1;
                 console.log(block2up);
                 break;
@@ -113,13 +114,14 @@ function showPion2() {
     for (i = 0; i < wallArry.length; i++) {
         for (xplus = 0; xplus < 50; xplus++) {
             block2st = 0;
-            if (circleObj.x - xplus == wallArry[i].curX && (wallArry[i].curY < circleObj.y && circleObj.y < wallArry[i].curY + 100)) {
+            if (circleObj.x - xplus == wallArry[i].curX && (wallArry[i].curY < circleObj.y && circleObj.y < wallArry[i].curY + 100)&&wallArry[i].height == 110) {
                 block2st = 1;
                 console.log(block2up);
                 break;
             }
         }
     }
+}
 
 }
 
@@ -145,7 +147,7 @@ function keyPressed() {
             }
 
         } else if (keyCode === RIGHT_ARROW && currentC1J < 8) {
-            if (block1dr == 0 && !(currentC1J + 1 == currentC2J && currentC1I == currentC2I)) {
+            if (block1dr == 0 && !(currentC1J + 1 == currentC2J && currentC1I == currentC2I) ) {
                 currentC1J = currentC1J + 1;
                 turn = false;
             }
